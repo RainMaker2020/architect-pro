@@ -1,0 +1,20 @@
+{
+  "name": "architect-pro-local",
+  "description": "Local marketplace for the architect-pro plugin",
+  "owner": {
+    "name": "Ali Alogaili",
+    "email": "ali@example.com"
+  },
+  "plugins": [
+    {
+      "name": "architect-pro",
+      "description": "Professional System Architect Plugin with Expert Panel (Trend-Scout & System-Architect).",
+      "version": "1.0.0",
+      "source": "./",
+      "author": {
+        "name": "Ali Alogaili",
+        "email": "ali@example.com"
+      }
+    }
+  ]
+}
