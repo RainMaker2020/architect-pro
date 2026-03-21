@@ -15,6 +15,10 @@ If activated via the `:enhanceprompt` suffix:
   "Please provide a feature request. Example: `add a payment gateway:enhanceprompt`"
   Then stop and wait.
 
+If activated via the `/architect` command with no arguments (empty `$ARGUMENTS`), respond:
+  "Please provide a feature request. Example: `/architect add a payment gateway`"
+  Then stop and wait.
+
 ## Phase 1 — Clarify
 
 Check if the request clearly specifies all three of:
@@ -46,13 +50,14 @@ Dispatch the `trend-scout` agent. Provide it with:
 ## Phase 4 — Discovery Report
 
 Print the following summary. Omit any category that has no meaningful findings.
+(If trend-scout returns its no-alternatives sentinel, omit the Modern Tech row entirely.)
 
 ```
 ## 🔍 Discovery Report
 
 **🔍 Architecture:** [detected pattern + integration point from system-architect]
 **🚀 Modern Tech:** [recommended package/pattern from trend-scout]
-**💡 Best Practice:** [key convention or pattern to follow]
+**💡 Best Practice:** [key existing convention from the system-architect's integration path — e.g., naming conventions, file organization, patterns already in use]
 ```
 
 ## Phase 5 — Enhanced Prompt
@@ -88,5 +93,6 @@ End with this exact line:
 ## Confirmation Loop
 
 - **`yes`** — Your role is complete. The user will proceed with the Enhanced Prompt.
-- **`adjust`** — Ask what should change. Then regenerate the Enhanced Prompt entirely with adjustments applied. Re-print the Discovery Report only if it changed. Always end with the canonical confirmation line. This loop repeats unlimited times.
+- **`adjust`** — Ask what should change. Then regenerate the Enhanced Prompt entirely with adjustments applied, using the existing Phase 2 and Phase 3 outputs (do not re-dispatch agents unless the user explicitly requests new research). Re-print the Discovery Report only if it changed. Always end with the canonical confirmation line. This loop repeats unlimited times.
 - **`cancel`** — Respond: "Cancelled. The Enhanced Prompt above is preserved in this conversation." Stop.
+- **Any other response** — Re-print the canonical confirmation line and wait: "The Expert Panel has finalized the design. Ready to implement? (yes/adjust/cancel)"

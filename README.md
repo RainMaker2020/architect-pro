@@ -14,16 +14,22 @@ When you give it a feature request, `architect-pro` runs a 5-phase Expert Panel:
 
 ## Installation
 
-```bash
-claude plugin install architect-pro
-```
+### Local install (recommended)
 
-Or clone and install locally:
+Clone and install locally:
 
 ```bash
 git clone https://github.com/alogaili/architect-pro
 claude plugin install --local ./architect-pro
 ```
+
+### Registry install (once published)
+
+```bash
+claude plugin install architect-pro
+```
+
+> Note: Registry install requires the plugin to be published to the Claude Code plugin registry.
 
 ## Usage
 
@@ -38,6 +44,8 @@ claude plugin install --local ./architect-pro
 ```
 add a payment gateway with Stripe:enhanceprompt
 ```
+
+> Note: there must be no space between the last word and `:enhanceprompt`. `add dark mode:enhanceprompt` ✓ — `add dark mode :enhanceprompt` ✗
 
 Both triggers run the identical 5-phase Expert Panel flow.
 
