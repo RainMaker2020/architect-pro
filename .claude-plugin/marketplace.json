@@ -3,7 +3,7 @@
   "description": "Local marketplace for the architect-pro plugin",
   "owner": {
     "name": "Ali Alogaili",
-    "email": "ali@example.com"
+    "email": "a.alogaili@isdsolutions.com"
   },
   "plugins": [
     {
@@ -13,7 +13,7 @@
       "source": "./",
       "author": {
         "name": "Ali Alogaili",
-        "email": "ali@example.com"
+        "email": "a.alogaili@isdsolutions.com"
       }
     }
   ]

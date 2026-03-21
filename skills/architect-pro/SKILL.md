@@ -50,7 +50,7 @@ Dispatch the `trend-scout` agent. Provide it with:
 ## Phase 4 — Discovery Report
 
 Print the following summary. Omit any category that has no meaningful findings.
-(If trend-scout returns its no-alternatives sentinel, omit the Modern Tech row entirely.)
+(If trend-scout returns its no-alternatives sentinel OR its WebSearch-unavailable sentinel, omit the Modern Tech row entirely.)
 
 ```
 ## 🔍 Discovery Report
