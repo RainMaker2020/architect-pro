@@ -1,0 +1,12 @@
+{
+  "name": "architect-pro",
+  "version": "1.0.0",
+  "description": "Professional System Architect Plugin with Expert Panel (Trend-Scout & System-Architect).",
+  "author": {
+    "name": "Ali Alogaili",
+    "email": "ali@example.com"
+  },
+  "homepage": "https://github.com/alogaili/architect-pro",
+  "license": "MIT",
+  "keywords": ["architecture", "design", "expert-panel", "feature-design", "prompts"]
+}
